@@ -64,7 +64,7 @@ cmake-build-*/
 
 .idea/
 
-# File-based project format
+# File-based io.miragon.example.base.project format
 *.iws
 
 # IntelliJ
@@ -236,7 +236,7 @@ typings/
 # rollup.js default build output
 dist/
 
-# Uncomment the public line if your project uses Gatsby
+# Uncomment the public line if your io.miragon.example.base.project uses Gatsby
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # https://create-react-app.dev/docs/using-the-public-folder/#docsNav
 # public
@@ -315,7 +315,7 @@ typings
 
 # Mongo Explorer plugin
 
-# File-based project format
+# File-based io.miragon.example.base.project format
 
 # IntelliJ
 
@@ -381,7 +381,7 @@ gradle-app.setting
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
-# Cache of project
+# Cache of io.miragon.example.base.project
 .gradletasknamecache
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
