@@ -3,6 +3,6 @@ Miragon is your best choice for process automation projects. The Startup based i
 
 ## Quick access
 1. Blog Posts
-2. Projects
-    2.1. [Example Project](./projects/miragon-example-project)
-3. Code Snippets
+1. Projects
+    1. [Example Project](./projects/miragon-example-project)
+1. Code Snippets
