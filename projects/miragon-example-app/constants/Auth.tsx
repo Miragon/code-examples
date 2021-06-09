@@ -81,7 +81,6 @@ const login = async (dispatch: any, connection?: "google-oauth2") => {
                 authModel.userInfo = userInfoResponse.data;
             }
 
-            console.log(authModel)
             saveAuthObject(authModel);
 
             // Dispatch the token
