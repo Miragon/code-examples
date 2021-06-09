@@ -22,7 +22,7 @@ The following description builds on top of the [miragon-example-project](../mira
 
 1. In Auth0: Create a new Application and select "Native" as Application Type  and set Allowed-Callback URLs to https://auth.expo.io/@<OWNER>/miragon-example-app
 1. In Auth0: Register a user and his/her password
-1. Change ClientId in `./constants/Auth.tsx` to your client-id. 
+1. Change ClientId and ClientDomain in `./constants/Auth.tsx` to your client-id. 
 
 
 

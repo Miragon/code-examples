@@ -44,7 +44,7 @@ In intelliJ -> Edit Configurations... -> Active Profile: "no-security"
 1. In Auth0: Go to Applications -> APIs -> Test and click on "Create Test Application". You can now use the request to get a valid token via Postman.
 1. Use the token for requests against this API. The following example was exported from Postman:
     ```
-   curl --location --request POST 'http://localhost:8081/api/project' \
+   curl --location --request POST 'http://localhost:8080/api/project' \
     --header 'accept: */*' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer eyJhbGc.....' \
