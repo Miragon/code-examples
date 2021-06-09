@@ -14,8 +14,9 @@ We are separating our domains always according the different layers an object re
 - **infrastructure**: Layer for storing the object entities. Its repositories provide a mechanism for the communication with the database, called Java Persistence API (JPA).
 
 ### 1.2 Shared functionality
-- **Exception Handling**: 
-- **Security**: 
+The `shared` package contains cross domain functionality:
+- **Exception Handling**: Using the `ResponseEntityExceptionHandler`, internal Exceptions will be mapped to HTTP responses.
+- **Security**: Using JSON Web Token (JWT) in combination with Auth0 to secure the endpoints.
 
 
 ## 2. Running this project
