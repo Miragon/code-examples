@@ -17,7 +17,7 @@ We are separating our domains always according the different layers an object re
 The `shared` package contains cross domain functionality:
 - **Exception Handling**: Using the `ResponseEntityExceptionHandler`, internal Exceptions will be mapped to HTTP responses.
 - **Security**: Using JSON Web Token (JWT) in combination with Auth0 to secure the endpoints.
-
+- **Api-Docu**: Swagger provides our api-doku at: http://localhost:8081/swagger-ui.html
 
 ## 2. Running this project
 To keep the disparity between dev and prod as small as possible, we're using an nginx in front of our application and save the data in a postgres-db.

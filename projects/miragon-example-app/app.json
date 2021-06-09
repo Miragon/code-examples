@@ -2,6 +2,8 @@
   "expo": {
     "name": "miragon-example-app",
     "slug": "miragon-example-app",
+    "scheme": "mea",
+    "owner": "miragon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +19,22 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "io.miragon.example-app",
+      "buildNumber": "1.0.1",
       "supportsTablet": true
     },
     "android": {
+      "package": "io.miragon.example_app",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
