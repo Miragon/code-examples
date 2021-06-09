@@ -10,14 +10,19 @@ import io.miragon.example.base.project.infrastructure.repository.ProjectReposito
 import io.miragon.example.base.shared.exception.ObjectNotFoundException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(SpringExtension.class)
+@ActiveProfiles(profiles = {"test"})
 @DisplayName("Project Service")
 public class ProjectServiceTest  {
 
