@@ -42,7 +42,7 @@ public class ProjectController {
 
     @Transactional
     @PostMapping()
-    @Operation(summary = "Create a new io.miragon.example.base.project")
+    @Operation(summary = "Create a new project")
     public ResponseEntity<ProjectTO> createNewProject(@RequestBody @Valid final NewProjectTO projectTO) {
         log.debug("Received request to create a new project: {}", projectTO);
         final NewProject newProject = this.projectMapper.mapToNewProject(projectTO);
