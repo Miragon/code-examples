@@ -20,16 +20,16 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const McoTableCell: React.FC<Props> = props => {
+const MiragonTableCell: React.FC<Props> = props => {
     const classes = useStyles();
     return (
         <MaterialTableCell
             padding={props.padding}
             align={props.align}
             className={clsx(props.noWrap && classes.noWrap && classes.cell, props.className)}>
-            {props.children}
+                {props.children}
         </MaterialTableCell>
     );
 };
 
-export default McoTableCell;
+export default MiragonTableCell;

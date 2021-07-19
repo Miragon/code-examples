@@ -3,7 +3,7 @@ import React, {useCallback, useState} from "react";
 import Drawer from "./Drawer/Drawer";
 import {useTheme} from "@material-ui/core";
 import useStyles from "../Layout/Styles/UseStyle"
-import McoAppBar from "./AppBar/McoAppBar";
+import MiragonAppBar from "./AppBar/MiragonAppBar";
 
 const Menu = (props: any) => {
     const classes = useStyles();
@@ -22,7 +22,7 @@ const Menu = (props: any) => {
 
     return(
         <>
-            <McoAppBar
+            <MiragonAppBar
                 classes={classes}
                 drawerOpener={handleDrawerOpen}
                 open={open}

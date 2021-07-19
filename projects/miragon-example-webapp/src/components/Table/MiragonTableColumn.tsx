@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }));
 
-const McoTableColumn: React.FC<Props> = props => {
+const MiragonTableColumn: React.FC<Props> = props => {
     const classes = useStyles(props);
     return (
         <TableCell
@@ -48,4 +48,4 @@ const McoTableColumn: React.FC<Props> = props => {
     );
 };
 
-export default McoTableColumn;
+export default MiragonTableColumn;

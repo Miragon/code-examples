@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import {ProjectTO} from "../../../api/models";
+import {ProjectTO, UpdateProjectTO} from "../../../api/models";
 import {Table, TableBody} from "@material-ui/core";
 import TableSearchRow from "../../../components/Table/TableSearchRow";
 import ProjectTableHeader from "./ProjectTableHeader";
@@ -10,6 +10,9 @@ import ProjectTableContent from "./ProjectTableContent";
 interface ProjectTable {
     projects: ProjectTO[];
     projectSearchString: string;
+
+    editProject: (id: string, updatedProject: UpdateProjectTO) => void;
+    deleteProject: (id: string) => void;
 
     handleSearchProject(event: ChangeEvent<HTMLInputElement>): void;
 }
@@ -37,6 +40,8 @@ const ProjectTable: React.FC<ProjectTable> = (props: ProjectTable) => {
 
                     <ProjectTableContent
                         projects={props.projects}
+                        editProject={props.editProject}
+                        deleteProject={props.deleteProject}
                     />
                 </TableBody>
             </Table>

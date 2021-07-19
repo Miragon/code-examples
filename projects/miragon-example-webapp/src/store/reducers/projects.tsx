@@ -1,11 +1,14 @@
-import {CREATE_PROJECT, SET_PROJECTS, UPDATE_PROJECT} from "../actions/projects";
+
+import {CREATE_PROJECT, DELETE_PROJECT, SET_PROJECTS, UPDATE_PROJECT} from "../actions/projects";
 import {ProjectTO} from "../../api/models";
+import {AnyAction} from "redux";
 
 const initialState = {
     allProjects: Array<ProjectTO>()
 }
 
-export default (state = initialState, action:any) => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export default (state = initialState, action: AnyAction) => {
     switch (action.type) {
 
         case SET_PROJECTS:
@@ -26,7 +29,14 @@ export default (state = initialState, action:any) => {
                 allProjects: replaceProject(state.allProjects, action.projects)
             }
 
+        case DELETE_PROJECT:
+            return {
+                ...state,
+                allProjects: state.allProjects.filter(project => project.id !== action.projectId)
+            }
+
     }
+
     return state;
 };
 

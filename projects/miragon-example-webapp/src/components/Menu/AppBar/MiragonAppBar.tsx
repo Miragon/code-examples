@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     },
 });
 
-const McoAppBar = (props: any) => {
+const MiragonAppBar = (props: any) => {
 
     const classes = useStyles();
     const {logout} = useAuth0();
@@ -39,7 +39,7 @@ const McoAppBar = (props: any) => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap>
-                    MCO App Desktop Client
+                    Miragon Example WebApp
                 </Typography>
                 <div className={props.classes.grow}/>
                 <Button className={classes.logoutButton} onClick={() => logout()}>
@@ -51,4 +51,4 @@ const McoAppBar = (props: any) => {
     );
 }
 
-export default McoAppBar;
+export default MiragonAppBar;

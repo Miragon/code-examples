@@ -1,18 +1,17 @@
 import {ERROR} from "./error";
-
+import ApiError from "../ApiError";
 import helpers from "../../constants/Functions";
 import * as api from "../../api/api";
 import {NewProjectTO, UpdateProjectTO} from "../../api/models";
-
+import {RootDispatch} from "../reducers/Store";
 
 export const SET_PROJECTS = 'SET_PROJECTS'
 export const CREATE_PROJECT = 'CREATE_PROJECT';
 export const UPDATE_PROJECT = 'UPDATE_PROJECT';
-
+export const DELETE_PROJECT = 'DELETE_PROJECT';
 
 export const fetchProjects = () => {
-
-    return async (dispatch: any, getState: any) => {
+    return async (dispatch: RootDispatch): Promise<void> => {
         const config = helpers.getClientConfig()
         const projectController = new api.ProjectControllerApi(config)
 
@@ -20,18 +19,26 @@ export const fetchProjects = () => {
             const response = await projectController.getAllProject()
             if (response.status === 200) {
                 dispatch({type: SET_PROJECTS, projects: response.data})
-            }
-            else {
-                dispatch({type: ERROR, error: new Error("Error fetching projects: " + response.status + ": " + response.statusText)})
+            } else {
+                dispatch({
+                    type: ERROR, error: new ApiError(
+                        "Error fetching Project: " + response.status,
+                        {axiosResponse: response})
+                })
             }
         } catch (error) {
-            dispatch({type: ERROR, error: new Error("Error fetching projects: " + + error.message)})
+            dispatch({
+                type: ERROR, error: new ApiError(
+                    "Error fetching Project: " + error.message,
+                    {}
+                )
+            })
         }
     }
 }
 
-export const createProject = (newPro: NewProjectTO) =>{
-    return async (dispatch: any, getState: any) => {
+export const createProject = (newPro: NewProjectTO) => {
+    return async (dispatch: RootDispatch): Promise<void> => {
         const config = helpers.getClientConfig();
         const projectController = new api.ProjectControllerApi(config);
 
@@ -39,32 +46,77 @@ export const createProject = (newPro: NewProjectTO) =>{
             const response = await projectController.createNewProject(newPro)
             if (response.status === 200) {
                 dispatch({type: CREATE_PROJECT, projects: response.data})
-            }
-            else {
-                dispatch({type: ERROR, error: new Error("Error creating projects: " + response.status + ": " + response.statusText)})
+            } else {
+                dispatch({
+                    type: ERROR, error: new ApiError(
+                        "Errpr creating Project: " + response.status,
+                        {axiosResponse: response}
+                    )
+                })
             }
         } catch (error) {
-            dispatch({type: ERROR, error: new Error("Error creating projects: " + + error.message)})
+            dispatch({
+                type: ERROR, error: new ApiError(
+                    "Error creating Project: " + error.message,
+                    {requestModel: newPro}
+                )
+            })
         }
-
     }
 }
 
 export const updateProject = (projectID: string, newData: UpdateProjectTO) => {
-    return async (dispatch:any, getState:any) => {
+    return async (dispatch: RootDispatch): Promise<void> => {
         const config = helpers.getClientConfig();
         const projectController = new api.ProjectControllerApi(config);
         try {
             const response = await projectController.updateProject(newData, projectID)
 
-            if(response.status===200){
-                dispatch({type:UPDATE_PROJECT, projects: response.data })
-            }
-            else {
-                dispatch({type: ERROR, error: new Error("Error updating projects: " + response.status + ": " + response.statusText)})
+            if (response.status === 200) {
+                dispatch({type: UPDATE_PROJECT, projects: response.data})
+            } else {
+                dispatch({
+                    type: ERROR, error: new ApiError(
+                        "Error updating Project " + response.status,
+                        {axiosResponse: response, requestModel: newData}
+                    )
+                })
             }
         } catch (error) {
-            dispatch({type: ERROR, error: new Error("Error updating projects: " + + error.message)})
+            dispatch({
+                type: ERROR, error: new ApiError(
+                    "Error updating Project" + error.message,
+                    {requestModel: newData}
+                )
+            })
+        }
+    }
+}
+
+export const deleteProject = (projectID: string) => {
+    return async (dispatch: RootDispatch): Promise<void> => {
+        const config = helpers.getClientConfig();
+        const projectController = new api.ProjectControllerApi(config);
+        try {
+            const response = await projectController.deleteProject(projectID)
+
+            if (response.status === 200) {
+                dispatch({type: DELETE_PROJECT, projectId: projectID})
+            } else {
+                dispatch({
+                    type: ERROR, error: new ApiError(
+                        "Error updating project " + response.status,
+                        {axiosResponse: response}
+                    )
+                })
+            }
+        } catch (error) {
+            dispatch({
+                type: ERROR, error: new ApiError(
+                    "Error deleting project" + error.message,
+                    {}
+                )
+            })
         }
     }
 }

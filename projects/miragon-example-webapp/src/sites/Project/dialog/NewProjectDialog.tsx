@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import SettingsFormRow from "./SettingsFormRow";
+import SettingsFormRow from "../../../components/Dialog/SettingsFormRow";
 import {Dialog, DialogActions, DialogContent, TextField, Button, DialogContentText} from "@material-ui/core";
-import {NewProjectTO} from "../../api/models";
-import McoDialogHeader from "./McoDialogHeader";
+import {NewProjectTO} from "../../../api/models";
+import MiragonDialogHeader from "../../../components/Dialog/MiragonDialogHeader";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles({
@@ -50,42 +50,42 @@ const NewProjectDialog: React.FC<NewProjectDialogProps> = (props:NewProjectDialo
 
     return(
         <Dialog open={true} onClose={props.handleCloseDialog}>
-            <McoDialogHeader title="Neues Projekt anlegen"/>
+            <MiragonDialogHeader title="New Project"/>
             <DialogContent>
 
                 <DialogContentText className={classes.dialogDescription}>
-                    Um ein neues Projekt zu erstellen füllen sie das untenstehende Formular aus.
+                    Please enter the new projects data.
                 </DialogContentText>
 
                 <TextField
                     className={classes.textField}
                     onChange={changeCustomer}
                     variant={"outlined"}
-                    label={"Kunde"}
+                    label={"Customer"}
                     value={customer}/>
 
                 <SettingsFormRow>
                     <TextField
                         className={classes.textField}
                         onChange={changeStreet}
-                        label={"Straße und Hausnummer"}
+                        label={"street"}
                         value={street} variant={"outlined"}/>
 
                     <TextField
                         className={classes.textField}
                         onChange={changePlz}
                         variant={"outlined"}
-                        label={"Ort und Plz"}
+                        label={"zipcode and city"}
                         value={plz}/>
                 </SettingsFormRow>
 
             </DialogContent>
             <DialogActions>
                 <Button onClick={props.handleCloseDialog} color="primary">
-                    Abbrechen
+                    Cancel
                 </Button>
                 <Button onClick={Save}>
-                    Speichern
+                    Save
                 </Button>
             </DialogActions>
         </Dialog>
