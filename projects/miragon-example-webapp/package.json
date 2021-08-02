@@ -26,6 +26,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "api-gen": "openapi-generator-cli generate -i http://localhost:8081/v3/api-docs -g typescript-axios -o ./src/api",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.3.9",
     "@types/react-router-dom": "^5.1.7"
   }
 }
