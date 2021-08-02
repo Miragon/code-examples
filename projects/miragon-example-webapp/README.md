@@ -24,11 +24,8 @@ yarn start
 - `./store/reducers`: Catching action dispatches and updating Redux in memory store
 
 ### 3. Update generated api
-1. Run miragons example backend and open its api definition (refere the backends Readme)
-2. Copy All and Paste it into [swagger-editor](http://editor.swagger.io/) -> confirm yaml conversion
-3. Click Generate Client -> typescript axios (and wait until the download has finished)
-4. Unzip -> copy `apis/` `models/`, `api.ts`, `base.ts` and `configuration.ts`  into `./api` (replace current files)
-5. Change BASE_PATH in `base.ts` to an empty array: ""
-6. The api is used in `./store/actions`. Refactor the updated code
+1. Run Miragons example backend and open its api definition (refer the backends Readme)
+2. Run `yarn api-gen` in the projects root folder
+3. The api is used in `./store/actions`. Refactor the updated code
 
 ### 4. Remote debugging

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {ProjectTO, UpdateProjectTO} from "../../../api/models";
+import {ProjectTO, UpdateProjectTO} from "../../../api";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import {IconButton, TableRow} from "@material-ui/core";

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import SettingsFormRow from "../../../components/Dialog/SettingsFormRow";
 import {Dialog, DialogActions, DialogContent, TextField, Button, DialogContentText} from "@material-ui/core";
-import {NewProjectTO} from "../../../api/models";
+import {NewProjectTO} from "../../../api";
 import MiragonDialogHeader from "../../../components/Dialog/MiragonDialogHeader";
 import {makeStyles} from "@material-ui/styles";
 

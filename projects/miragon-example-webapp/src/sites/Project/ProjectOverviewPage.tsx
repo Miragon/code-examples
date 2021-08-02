@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useCallback, useEffect, useState} from "react";
 import * as projectActions from "../../store/actions/projects";
 import {useSelector, useDispatch} from "react-redux";
-import {NewProjectTO, ProjectTO, UpdateProjectTO} from "../../api/models";
+import {NewProjectTO, ProjectTO, UpdateProjectTO} from "../../api";
 import {RootState} from "../../store/reducers/Store";
 import {Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";

@@ -51,19 +51,19 @@ export interface ProjectTO {
      * @type {string}
      * @memberof ProjectTO
      */
-    id?: string;
+    id: string;
     /**
      * 
      * @type {string}
      * @memberof ProjectTO
      */
-    customer?: string;
+    customer: string;
     /**
      * 
      * @type {string}
      * @memberof ProjectTO
      */
-    address?: string;
+    address: string;
 }
 /**
  * Data to update an existing io.miragon.example.base.project

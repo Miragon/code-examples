@@ -1,6 +1,6 @@
 
 import {CREATE_PROJECT, DELETE_PROJECT, SET_PROJECTS, UPDATE_PROJECT} from "../actions/projects";
-import {ProjectTO} from "../../api/models";
+import {ProjectTO} from "../../api";
 import {AnyAction} from "redux";
 
 const initialState = {

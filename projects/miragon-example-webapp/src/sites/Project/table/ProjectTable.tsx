@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import {ProjectTO, UpdateProjectTO} from "../../../api/models";
+import {ProjectTO, UpdateProjectTO} from "../../../api";
 import {Table, TableBody} from "@material-ui/core";
 import TableSearchRow from "../../../components/Table/TableSearchRow";
 import ProjectTableHeader from "./ProjectTableHeader";

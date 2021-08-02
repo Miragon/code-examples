@@ -2,7 +2,7 @@ import {ERROR} from "./error";
 import ApiError from "../ApiError";
 import helpers from "../../constants/Functions";
 import * as api from "../../api/api";
-import {NewProjectTO, UpdateProjectTO} from "../../api/models";
+import {NewProjectTO, UpdateProjectTO} from "../../api";
 import {RootDispatch} from "../reducers/Store";
 
 export const SET_PROJECTS = 'SET_PROJECTS'
@@ -70,7 +70,7 @@ export const updateProject = (projectID: string, newData: UpdateProjectTO) => {
         const config = helpers.getClientConfig();
         const projectController = new api.ProjectControllerApi(config);
         try {
-            const response = await projectController.updateProject(newData, projectID)
+            const response = await projectController.updateProject(projectID, newData)
 
             if (response.status === 200) {
                 dispatch({type: UPDATE_PROJECT, projects: response.data})
