@@ -16,6 +16,9 @@ interface TableFallbackRow {
     colSpan: number;
 }
 
+/**
+ * A table row that is displayed when a search-query on a table returns no results
+ */
 const TableFallbackRow: React.FC<TableFallbackRow> = (props: TableFallbackRow) => {
     const classes = useStyles();
 

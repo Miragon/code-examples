@@ -1,4 +1,3 @@
-
 import {makeStyles} from "@material-ui/core/styles";
 import React from "react";
 
@@ -19,8 +18,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-
-const SettingsFormRow: React.FC = (props) => {
+const McoFormRow: React.FC = (props) => {
     const classes = useStyles();
     return(
         <div className={classes.root}>
@@ -29,5 +27,5 @@ const SettingsFormRow: React.FC = (props) => {
     );
 }
 
-export default SettingsFormRow;
+export default McoFormRow;
 

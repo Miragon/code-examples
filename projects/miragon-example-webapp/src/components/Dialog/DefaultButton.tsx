@@ -2,6 +2,7 @@ import { makeStyles, Theme } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import clsx from "clsx";
 import React from "react";
+import {createTestAttributes} from "../../util/TestUtils";
 
 interface Props {
     title: string;
@@ -48,6 +49,7 @@ const DefaultButton: React.FC<Props> = props => {
     const classes = useStyles();
     return (
         <Button
+            {...createTestAttributes(props.testId)}
             disableElevation
             className={clsx(classes.button, {
                 [classes.small]: props.size === "small",

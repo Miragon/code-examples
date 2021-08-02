@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import {TableContainer as MaterialTable} from "@material-ui/core/";
 import clsx from "clsx";
 import React from "react";
+import {createTestAttributes} from "../../util/TestUtils";
 
 interface Props {
     className?: string;
@@ -21,6 +22,7 @@ const TableContainer: React.FC<Props> = props => {
     const classes = useStyles();
     return (
         <MaterialTable
+            {...createTestAttributes(props.testId)}
             className={clsx(classes.root, props.className)}>
             {props.children}
         </MaterialTable>

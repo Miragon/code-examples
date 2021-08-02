@@ -6,7 +6,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import TableButton from "./TableButton";
 
 const useStyles = makeStyles({
-    personSelectedCell: {
+    cell: {
         backgroundColor: "#a2c8db",
         borderBottomColor: "#CCC",
     },
@@ -16,6 +16,7 @@ interface TableSelectRowProps {
     selectedRows: number;
     textSingleSelect: string;
     textMultiSelect: string;
+    tooltip: string
     colSpan: number;
     handleClickOnDeleteIcon(): void
 }
@@ -29,14 +30,14 @@ const TableSelectRow: React.FC<TableSelectRowProps> = (props: TableSelectRowProp
 
     return (
         <TableRow>
-            <TableCell colSpan={props.colSpan-1} className={classes.personSelectedCell}>
+            <TableCell colSpan={props.colSpan-1} className={classes.cell}>
                 {props.selectedRows === 1 ? props.textSingleSelect :
                     props.selectedRows + " " + props.textMultiSelect}
             </TableCell>
-            <TableCell colSpan={1} className={classes.personSelectedCell}>
+            <TableCell colSpan={1} className={classes.cell}>
                 <TableButton
                     onClick={props.handleClickOnDeleteIcon}>
-                    <Tooltip title="Ansprechpartner löschen">
+                    <Tooltip title={props.tooltip}>
                         <DeleteIcon/>
                     </Tooltip>
                 </TableButton>

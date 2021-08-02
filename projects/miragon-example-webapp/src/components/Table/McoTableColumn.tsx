@@ -2,6 +2,7 @@ import {makeStyles, Padding, Theme} from "@material-ui/core";
 import TableCell from "@material-ui/core/TableCell";
 import clsx from "clsx";
 import React from "react";
+import {createTestAttributes} from "../../util/TestUtils";
 
 interface Props {
     title?: string;
@@ -31,10 +32,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }));
 
-const MiragonTableColumn: React.FC<Props> = props => {
+const McoTableColumn: React.FC<Props> = props => {
     const classes = useStyles(props);
     return (
         <TableCell
+            {...createTestAttributes(props.testId)}
             variant="head"
             align={props.align}
             padding={props.padding}
@@ -48,4 +50,4 @@ const MiragonTableColumn: React.FC<Props> = props => {
     );
 };
 
-export default MiragonTableColumn;
+export default McoTableColumn;

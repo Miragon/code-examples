@@ -1,7 +1,6 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-
-import ProjectOverviewPage from "../../sites/Project/ProjectOverviewPage"
+import ProjectOverviewPage from "../../Sites/Project/ProjectOverviewPage"
 
 const Router: React.FC = () => {
     return (
@@ -13,7 +12,6 @@ const Router: React.FC = () => {
             <Route
                 exact path="/projects"
                 component={ProjectOverviewPage}/>
-
 
         </Switch>
     );

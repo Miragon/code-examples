@@ -28,10 +28,11 @@ interface TableSearchRowProps {
     handleSearchForSomething(event : ChangeEvent<HTMLInputElement>): void,
 }
 
+/**
+ * A table row that contains a search bar, to perform a search query on a specific table
+ */
 const TableSearchRow : React.FC<TableSearchRowProps> = (props: TableSearchRowProps) => {
-
     const classes = useStyles();
-
     return (
         <TableRow className={classes.row}>
             <TableCell className={classes.cell} colSpan={props.colSpan}>

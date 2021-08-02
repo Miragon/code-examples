@@ -1,4 +1,4 @@
-import {Configuration, ConfigurationParameters} from "../api";
+import {Configuration} from "../api";
 
 const helpers = {
     isNumber: function (value: string): boolean {
@@ -21,10 +21,9 @@ const helpers = {
             }
         })
     },
-    getBearerToken: function (): string|null {
+    getBearerToken: function (): string | null {
         return localStorage.getItem("token");
     }
 }
 
-
-export default helpers
+export default helpers;

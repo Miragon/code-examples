@@ -16,7 +16,7 @@ interface DialogHeaderProps {
     title: string;
 }
 
-const MiragonDialogHeader: React.FC<DialogHeaderProps> = (props : DialogHeaderProps) => {
+const McoDialogHeader: React.FC<DialogHeaderProps> = (props : DialogHeaderProps) => {
     const classes = useStyles();
     return (
         <DialogTitle className={classes.dialogTitle}>
@@ -25,4 +25,4 @@ const MiragonDialogHeader: React.FC<DialogHeaderProps> = (props : DialogHeaderPr
     );
 }
 
-export default MiragonDialogHeader;
+export default McoDialogHeader;

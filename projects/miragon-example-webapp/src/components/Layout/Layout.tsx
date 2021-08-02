@@ -1,18 +1,28 @@
 import React, {useState} from "react";
 
-import Menu from "../Menu/Menu";
 import useStyles from "./Styles/UseStyle"
-import clsx from "clsx";
 import Router from "./Router"
 import {BrowserRouter} from "react-router-dom";
 import {makeStyles} from "@material-ui/styles";
+import {useAuth0} from "@auth0/auth0-react";
+import Button from "@material-ui/core/Button";
 
-const style = makeStyles({
+const styles = makeStyles({
     content: {
         flexGrow: 1,
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#F5F5F5",
+    },
+    page: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+    },
+    pageContent: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
     },
     container: {
         flexGrow: 1
@@ -49,22 +59,20 @@ const style = makeStyles({
 
 const Layout: React.FC = () => {
 
-    const defaultClasses = style();
+    const classes = styles();
     const sidebarClasses = useStyles();
-    const [isSideBarOpen, openSideBar] = useState(true)
-
 
     return (
         <>
             <BrowserRouter>
-                <Menu openSideBar={(isOpen: boolean) => openSideBar(isOpen)}/>
-                <main
-                    className={clsx(sidebarClasses.content, {
-                        [sidebarClasses.contentShift]: isSideBarOpen,
-                    })}>
+                <main>
                     <div className={sidebarClasses.drawerHeader} />
-                    <div className={defaultClasses.content}>
-                        <Router/>
+                    <div className={classes.content}>
+                        <div className={classes.page}>
+                            <div className={classes.pageContent}>
+                                <Router/>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </BrowserRouter>
