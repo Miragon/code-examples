@@ -50,3 +50,12 @@ export const sanitizeString = (
         ? input.replaceAll("</p><p>", "</p> <p>") : input || "";
     return spaced.replaceAll(/<.*?>/g, "");
 };
+
+export const splitAddress = (address: string | undefined): string[] => {
+    if (!address) {
+        return ["Unbekannt"];
+    }
+
+    return address.split(",")
+        .map(part => part.trim());
+}

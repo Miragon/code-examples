@@ -1,12 +1,9 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import projectReducer from './projects'
-import errorReducer from './error'
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { ProjectsSlice } from "./projects";
 
 export const rootReducer = combineReducers({
-    projects: projectReducer,
-    errors: errorReducer,
+    projects: ProjectsSlice.reducer,
 });
-
 
 export const ClearStore = {
     type: "Root:Clear"
@@ -18,6 +15,8 @@ export const store = configureStore({
             return rootReducer(undefined, action);
         }
 
+        // See https://github.com/rt2zz/redux-persist/issues/1140
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return rootReducer(state as any, action);
     }
 });
