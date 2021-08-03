@@ -18,7 +18,7 @@ Phone-Emulators: Install Android Studio and/or XCode and follow the instructions
 Set `owner` to your expo-username or your organisation
 
 #### c) Configure Authentication with Auth0
-The following description builds on top of the [miragon-example-project](../miragon-example-project) instructions how to create an account and a new tenant.
+The following description builds on top of the [miragon-example-project](../miragon-example-backend) instructions how to create an account and a new tenant.
 
 1. In Auth0: Create a new Application and select "Native" as Application Type  and set Allowed-Callback URLs to https://auth.expo.io/@<OWNER>/miragon-example-app
 1. In Auth0: Register a user and his/her password
@@ -64,7 +64,7 @@ expo start
 
 
 ## Expo
-Using Github-Actions: https://github.com/expo/expo-github-action#authenticate-using-an-expo-token
+Expo is a React Native Wrapper providing lots of comfortable features.
 
 ### Publishing
 Using Expo Go on your iPhone will always access the default release channel.

@@ -3,7 +3,7 @@ Miragon is your best choice for process automation projects. The Startup based i
 This project is part of our blog post series, in which we show how to implement various challenging requirements with the highest code quality.
 
 ## Start working
-Please start miragons [example-backend](https://github.com/FlowSquad/code-examples/tree/main/projects/miragon-example-project) first. 
+Please start miragons [example-backend](../miragon-example-backend) first. 
 Make sure its docker services nginx and postgres are running. Nginx will expect 
 
 ### 1. Run the application
@@ -29,3 +29,4 @@ yarn start
 3. The api is used in `./store/actions`. Refactor the updated code
 
 ### 4. Remote debugging
+Install React Developer Tools (Chrome): https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
