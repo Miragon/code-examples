@@ -40,7 +40,7 @@ const ProjectTable: React.FC<ProjectTable> = props => {
 
                     <TableSearchRow
                         search={search}
-                        label="Projekt durchsuchen..."
+                        label="Search in Projects..."
                         onSearchChanged={setSearch} />
 
                     <ProjectTableContent

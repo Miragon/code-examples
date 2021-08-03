@@ -89,12 +89,11 @@ const UpdateProjectDialog: React.FC<UpdateProjectProps> = (props: UpdateProjectP
         <PopupDialog
             open={open}
             disabled={disabled}
-            title="Bauvorhaben aktualisieren"
-            description="Bitte füllen Sie das unten stehende Formular aus, um das gewählte
-                Projekt anzupassen."
-            secondary="Abbrechen"
+            title="Update project"
+            description="Please fill the form below to update the project."
+            secondary="Cancel"
             onSecondary={onClosed}
-            primary="Speichern"
+            primary="Save"
             onPrimary={onSave}
             error={error}
             onCloseError={() => setError(undefined)}>
@@ -104,38 +103,38 @@ const UpdateProjectDialog: React.FC<UpdateProjectProps> = (props: UpdateProjectP
                 required
                 size="small"
                 multiline
-                label="Name"
+                label="Customer"
                 maxLength={50}
                 value={customer}
                 setValue={setCustomer}
                 error={customer.length === 0}
                 showError={validate}
-                textOnError="Bitte geben Sie den Namen des Kunden an!" />
+                textOnError="Please enter the projects name." />
 
             <InputFieldRow>
                 <ValidatedTextField
                     className={classes.textField}
                     required
                     size="small"
-                    label="Straße Hausnummer."
+                    label="Street and Nr."
                     maxLength={40}
                     value={street}
                     setValue={setStreet}
                     error={street.length === 0}
                     showError={validate}
-                    textOnError="Bitte geben Sie Straße und Hausnummer. an!" />
+                    textOnError="Please set the projects street and the street number." />
 
                 <ValidatedTextField
                     className={classes.textField}
                     required
                     size="small"
-                    label="PLZ Ort"
+                    label="Zip code and city"
                     maxLength={30}
                     value={zipCodeAndCity}
                     setValue={setZipCodeAndCity}
                     error={zipCodeAndCity.length === 0}
                     showError={validate}
-                    textOnError="Bitte geben Sie PLZ und Ort an!" />
+                    textOnError="Please set the projects zip code and city." />
             </InputFieldRow>
 
         </PopupDialog>

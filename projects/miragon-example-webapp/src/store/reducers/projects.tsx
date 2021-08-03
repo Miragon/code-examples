@@ -1,6 +1,6 @@
 import { createSlice, Draft, PayloadAction } from "@reduxjs/toolkit";
 import { ProjectControllerApi, ProjectTO } from "../../api";
-import { ApiError } from "../../models/Auth/ApiError";
+import { ApiError } from "../../models/Error/ApiError";
 import { apiExec, hasFailed } from "../../util/ApiUtils";
 import {
     ADD_PROJECT,

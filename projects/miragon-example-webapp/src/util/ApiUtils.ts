@@ -2,7 +2,7 @@ import { AxiosResponse } from "axios";
 import { Configuration } from "../api";
 import { BaseAPI } from "../api/base";
 import helpers from "../constants/Functions";
-import { ApiError } from "../models/Auth/ApiError";
+import { ApiError } from "../models/Error/ApiError";
 
 interface FailedApiResponse {
     error: ApiError;

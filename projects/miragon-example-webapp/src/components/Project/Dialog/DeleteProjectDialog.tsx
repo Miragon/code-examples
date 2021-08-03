@@ -50,11 +50,11 @@ const DeleteProjectDialog: React.FC<DeleteProjectDialogProps> = props => {
         <PopupDialog
             open={open}
             disabled={disabled}
-            title="Projekt löschen"
-            description="Sind Sie sicher, dass Sie das Projekt wirklich löschen möchten?"
-            secondary="Abbrechen"
+            title="Delete Project"
+            description="Are you sure to delete the Project?"
+            secondary="Cancel"
             onSecondary={() => onClosed(false)}
-            primary="Löschen"
+            primary="Delete"
             onPrimary={onDelete}
             deleteMode
             error={error}
@@ -64,8 +64,8 @@ const DeleteProjectDialog: React.FC<DeleteProjectDialogProps> = props => {
                 left
                 keyWidth="120px"
                 entries={[
-                    ["Kunde", project?.customer],
-                    ["Adresse", project?.address]
+                    ["Customer", project?.customer],
+                    ["Address", project?.address]
                 ]} />
 
         </PopupDialog>

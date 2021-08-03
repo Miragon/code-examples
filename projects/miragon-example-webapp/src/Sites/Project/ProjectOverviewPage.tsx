@@ -35,16 +35,16 @@ const ProjectOverviewPage: React.FC = () => {
 
     return (
         <div>
-            <ParagraphHeader title="Alle Projekte">
+            <ParagraphHeader title="All Projects">
                 <DefaultButton
                     icon={<Add />}
-                    title="Neues Projekt erstellen"
+                    title="Create new Project"
                     onClicked={() => setCreateDialogIsOpen(true)} />
             </ParagraphHeader>
 
             {error && (
                 <Toast
-                    message="Es konnten nicht alle Daten geladen werden. Bitte versuchen Sie es erneut."
+                    message="Failed to load data. Please try again."
                     action={retryAction(() => {
                         projects.error && dispatch(fetchProjects());
                     })} />

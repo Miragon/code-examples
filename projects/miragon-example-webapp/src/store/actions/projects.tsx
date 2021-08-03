@@ -1,5 +1,5 @@
 import { ProjectTO } from "../../api";
-import { ApiError } from "../../models/Auth/ApiError";
+import { ApiError } from "../../models/Error/ApiError";
 
 export const PROJECTS_ERROR = 'PROJECTS_ERROR';
 export const SET_PROJECTS = 'SET_PROJECTS'

@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-const McoTableCell: React.FC<Props> = props => {
+const MiragonTableCell: React.FC<Props> = props => {
     const classes = useStyles();
     return (
         <MaterialTableCell
@@ -31,4 +31,4 @@ const McoTableCell: React.FC<Props> = props => {
     );
 };
 
-export default McoTableCell;
+export default MiragonTableCell;

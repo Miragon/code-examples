@@ -4,7 +4,7 @@ import { Theme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import { Toast } from "../Error/Toast";
-import McoDialogHeader from "./McoDialogHeader";
+import MiragonDialogHeader from "./MiragonDialogHeader";
 
 const useStyles = makeStyles((theme: Theme) => ({
     dialogDescription: {
@@ -58,7 +58,7 @@ const PopupDialog: React.FC<Props> = props => {
             open={open}
             onClose={onSecondary}
             disableBackdropClick>
-            <McoDialogHeader title={title} />
+            <MiragonDialogHeader title={title} />
             <DialogContent>
 
                 <Toast

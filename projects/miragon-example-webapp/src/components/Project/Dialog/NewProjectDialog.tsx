@@ -77,12 +77,11 @@ const NewProjectDialog: React.FC<NewProjectDialogProps> = props => {
         <PopupDialog
             open={open}
             disabled={disabled}
-            title="Neues Projekt anlegen"
-            description="Bitte füllen Sie das unten stehende Formular aus, um ein neues Bauvorhaben
-                anzulegen."
-            secondary="Abbrechen"
+            title="Create new Project"
+            description="Please fill the form below to create a project."
+            secondary="Cancel"
             onSecondary={onClosed}
-            primary="Anlegen"
+            primary="Create"
             onPrimary={onCreate}
             error={error}
             onCloseError={() => setError(undefined)}>
@@ -92,38 +91,38 @@ const NewProjectDialog: React.FC<NewProjectDialogProps> = props => {
                 required
                 size="small"
                 multiline
-                label="Kunde"
+                label="Customer"
                 maxLength={50}
                 value={customer}
                 setValue={setCustomer}
                 error={customer.length === 0}
                 showError={validate}
-                textOnError="Bitte geben Sie einen Namen an!" />
+                textOnError="Please enter the projects name." />
 
             <InputFieldRow>
                 <ValidatedTextField
                     className={classes.textField}
                     required
                     size="small"
-                    label="Straße, Nr."
+                    label="Street and Nr."
                     maxLength={40}
                     value={street}
                     setValue={setStreet}
                     error={street.length === 0}
                     showError={validate}
-                    textOnError="Bitte geben Sie Straße und Nr. an!" />
+                    textOnError="Please set the projects street and the street number." />
 
                 <ValidatedTextField
                     className={classes.textField}
                     required
                     size="small"
-                    label="PLZ, Ort"
+                    label="Zip code and city"
                     maxLength={30}
                     value={zipCodeAndCity}
                     setValue={setZipCodeAndCity}
                     error={zipCodeAndCity.length === 0}
                     showError={validate}
-                    textOnError="Bitte geben Sie PLZ und Ort an!" />
+                    textOnError="Please set the projects zip code and city." />
             </InputFieldRow>
 
         </PopupDialog>

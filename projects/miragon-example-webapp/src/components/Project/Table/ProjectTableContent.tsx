@@ -3,8 +3,8 @@ import { Delete, Edit } from "@material-ui/icons";
 import React from "react";
 import { ProjectTO } from "../../../api";
 import { sortByString } from "../../../util/SortUtils";
-import McoTableButtonCell from "../../Table/McoTableButtonCell";
-import McoTableCell from "../../Table/McoTableCell";
+import McoTableButtonCell from "../../Table/MiragonTableButtonCell";
+import MiragonTableCell from "../../Table/MiragonTableCell";
 import TableFallbackRow from "../../Table/TableFallbackRow";
 
 
@@ -25,18 +25,18 @@ const ProjectTableContent: React.FC<Props> = props => {
         <>
             <TableFallbackRow
                 availableRows={projects.length}
-                fallbackText="Keine Bauvorhaben gefunden." />
+                fallbackText="No Projects found." />
 
             {sortByString(projects, p => p.customer).map(proj => (
                 <TableRow key={proj.id}>
-                    <McoTableCell>
+                    <MiragonTableCell>
                         {proj.customer}
-                    </McoTableCell>
-                    <McoTableCell>
+                    </MiragonTableCell>
+                    <MiragonTableCell>
                             {proj.address}
-                    </McoTableCell>
+                    </MiragonTableCell>
                     <McoTableButtonCell>
-                        <Tooltip title="Bauvorhaben bearbeiten">
+                        <Tooltip title="Edit Project">
                             <IconButton
                                 size="small"
                                 onClick={() => onEdit(proj)}>
@@ -45,7 +45,7 @@ const ProjectTableContent: React.FC<Props> = props => {
                         </Tooltip>
                     </McoTableButtonCell>
                     <McoTableButtonCell>
-                        <Tooltip title="Bauvorhaben löschen">
+                        <Tooltip title="Delete Project">
                             <IconButton
                                 size="small"
                                 onClick={() => onDelete(proj)}>
