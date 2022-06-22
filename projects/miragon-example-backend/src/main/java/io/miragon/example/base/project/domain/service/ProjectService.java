@@ -62,7 +62,7 @@ public class ProjectService {
      * Verifies that the io.miragon.example.base.project with the received ID exists,
      * as the called method would throw an exception if it wouldn't
      */
-    public void verifyThatProjectExists(final String projectId) {
+    public void verifyProjectExists(final String projectId) {
         this.getProject(projectId);
     }
 
