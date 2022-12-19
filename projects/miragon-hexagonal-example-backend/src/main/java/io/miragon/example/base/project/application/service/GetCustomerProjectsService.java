@@ -1,6 +1,6 @@
 package io.miragon.example.base.project.application.service;
 
-import io.miragon.example.base.common.Port;
+import io.miragon.example.base.common.UseCase;
 import io.miragon.example.base.project.application.in.GetCustomerProjectsQuery;
 import io.miragon.example.base.project.application.out.LoadCustomerProjectsPort;
 import io.miragon.example.base.project.domain.Project;
@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-@Port
+@UseCase
 @RequiredArgsConstructor
 public class GetCustomerProjectsService implements GetCustomerProjectsQuery {
 

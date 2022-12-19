@@ -7,6 +7,6 @@ POST http://localhost:8081/api/project
 Content-Type: application/json
 
 {
-  "customer": "FlowSquad",
-  "address": "Martini Park"
+  "customer": "Muster AG",
+  "address": "Musterstraße 123"
 }

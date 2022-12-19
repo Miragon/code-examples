@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-public @interface Port {
+public @interface UseCase {
 
   @AliasFor(annotation = Component.class)
   String value() default "";

@@ -1,17 +1,15 @@
 package io.miragon.example.base.project.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Builder
-@ToString
+@Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Project {
 
-    private final String id;
+    private String id;
     private String customer;
     private String address;
 
