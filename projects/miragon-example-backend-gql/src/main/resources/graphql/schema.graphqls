@@ -1,0 +1,44 @@
+type Query {
+    projects: [ProjectTO]
+    customers: [CustomerTO]
+    dummy: String
+}
+
+type Mutation {
+    createProject(newProjectTO: NewProjectTO): ProjectTO
+    updateProject(updateProjectTO: UpdateProjectTO): ProjectTO
+
+    createCustomer(newCustomerTO: NewCustomerTO): CustomerTO
+}
+
+
+# PROJECTS
+
+input NewProjectTO {
+    address: String!
+    customerId: String
+}
+
+input UpdateProjectTO {
+    id: ID!
+    address: String
+    customerId: String
+}
+
+type ProjectTO {
+    id: String!
+    address: String!
+    customerId: String!
+}
+
+
+# CUSTOMERS
+
+input NewCustomerTO {
+    name: String!
+}
+
+type CustomerTO {
+    id: String!
+    name: String!
+}
