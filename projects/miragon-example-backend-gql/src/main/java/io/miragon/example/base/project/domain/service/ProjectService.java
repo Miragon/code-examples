@@ -29,6 +29,9 @@ public class ProjectService {
         return this.projectMapper.mapToModel(this.projectRepository.findAll());
     }
 
+    public List<Project> getProjectsByCustomerIds(final List<String> customerIds) {
+        return this.projectMapper.mapToModel(this.projectRepository.findByCustomerIdIn(customerIds));
+    }
     /**
      * Create new io.miragon.example.base.project and save it to the database
      */
