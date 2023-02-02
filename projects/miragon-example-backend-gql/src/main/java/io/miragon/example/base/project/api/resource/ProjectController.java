@@ -46,9 +46,9 @@ public class ProjectController {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @MutationMapping
-    public ProjectTO createProject(@Argument final NewProjectTO projectTO) {
-        log.debug("Received request to create a new project: {}", projectTO);
-        final NewProject newProject = this.projectMapper.mapToNewProject(projectTO);
+    public ProjectTO createProject(@Argument final NewProjectTO newProjectTO) {
+        log.debug("Received request to create a new project: {}", newProjectTO);
+        final NewProject newProject = this.projectMapper.mapToNewProject(newProjectTO);
         return this.projectMapper.mapToTO(this.projectService.createProject(newProject));
     }
 

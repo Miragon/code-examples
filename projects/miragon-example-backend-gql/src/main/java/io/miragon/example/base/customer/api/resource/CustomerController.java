@@ -41,9 +41,9 @@ public class CustomerController {
 
     @MutationMapping
     @Transactional(propagation = Propagation.REQUIRED)
-    public CustomerTO createCustomer(@Argument final NewCustomerTO customerTO) {
-        log.debug("Received request to create a new customer: {}", customerTO);
-        final NewCustomer newCustomer = this.customerMapper.mapToModel(customerTO);
+    public CustomerTO createCustomer(@Argument final NewCustomerTO newCustomerTO) {
+        log.debug("Received request to create a new customer: {}", newCustomerTO);
+        final NewCustomer newCustomer = this.customerMapper.mapToModel(newCustomerTO);
         return this.customerMapper.mapToTO(this.customerService.createCustomer(newCustomer));
     }
 

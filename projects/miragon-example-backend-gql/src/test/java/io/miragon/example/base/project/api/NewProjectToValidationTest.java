@@ -21,7 +21,7 @@ public class NewProjectToValidationTest extends MiragonValidationTest {
     public void checkValid() {
         // Arrange
         NewProjectTO validNewProject = NewProjectTO.builder()
-                .customer("Something")
+                .customerId("Something")
                 .address("Something")
                 .build();
 
@@ -56,7 +56,7 @@ public class NewProjectToValidationTest extends MiragonValidationTest {
     public void checkMissingAddressInvalid() {
         // Arrange
         NewProjectTO validNewProject = NewProjectTO.builder()
-                .customer("Something")
+                .customerId("Something")
                 .build();
 
         // Act

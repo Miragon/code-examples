@@ -34,9 +34,9 @@ compileJava {
 
 dependencies {
     // GraphQ
-    implementation 'org.springframework.boot:spring-boot-starter-graphql:2.7.5'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.7.5'
-    implementation 'org.springframework.boot:spring-boot-starter-websocket:2.7.5'
+    implementation 'org.springframework.boot:spring-boot-starter-graphql:2.7.4'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.7.4'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket:2.7.4'
     implementation 'io.projectreactor:reactor-core:3.4.24'
 
     //Web
