@@ -62,7 +62,7 @@ cmake-build-*/
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
 
-.idea/
+.idea
 
 # File-based io.miragon.example.base.project format
 *.iws

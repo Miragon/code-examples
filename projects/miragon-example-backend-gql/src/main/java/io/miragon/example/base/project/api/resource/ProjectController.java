@@ -31,11 +31,6 @@ public class ProjectController {
     private final ProjectService projectService;
     private final ProjectApiMapper projectMapper;
 
-    @QueryMapping
-    public String dummy() {
-        return "hEllo";
-    }
-
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     @QueryMapping
     public List<ProjectTO> projects() {

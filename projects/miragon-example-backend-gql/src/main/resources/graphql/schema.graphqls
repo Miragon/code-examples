@@ -11,6 +11,9 @@ type Mutation {
     createCustomer(newCustomerTO: NewCustomerTO): CustomerTO
 }
 
+type Subscription {
+    mySubscription: String
+}
 
 # PROJECTS
 
