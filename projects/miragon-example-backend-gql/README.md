@@ -1,12 +1,11 @@
-# Miragon Example Backend
+# Miragon Example Backend - GraphQL
 Miragon is your best choice for process automation projects. The Startup based in Augsburg is specialised in Software Development using the Camunda Process Engine and provides professional IT expertise. Visit our website: https://www.miragon.io/ </br>
 
 This project is part of our blog post series, in which we show how to implement various challenging requirements with the highest code quality.
 
 ## 1. Project structure
-This backend application does basically the same as the REST-Project, but it uses GraphQL. It allows managing projects, which represent an object containing a customerId name and an adress and customers, which represent an object containing a name. 
-Using the GraphQL, a client is able to create, read, update and delete (CRUD) projects and customers.
-The application is supposed to show how Spring integrates with GraphQL and how advantages like selective querying or subscriptions can be implemented.
+This backend application does basically the same as the REST-Project, but it uses GraphQL. The application is supposed to show how Spring integrates with GraphQL and how advantages like selective querying or subscriptions can be implemented.
+It allows managing projects, which represent an object containing a customerId name and an adress. You can also manage customers, which represent an object containing a name. The application demonstrates how one GraphQL Query can access multiple resources by querying a customer with his corresponding projects.
 
 ### 1.1 Domain 'project'
 We are separating our domains always according the different layers an object representation has to go through:
