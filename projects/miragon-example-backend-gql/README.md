@@ -4,7 +4,7 @@ Miragon is your best choice for process automation projects. The Startup based i
 This project is part of our blog post series, in which we show how to implement various challenging requirements with the highest code quality.
 
 ## 1. Project structure
-This backend application does basically the same as the REST-Project, but it uses GraphQL. The application is supposed to show how Spring integrates with GraphQL and how advantages like selective querying or subscriptions can be implemented.
+This backend application does basically the same as [this project of our blog post series](https://github.com/FlowSquad/code-examples/tree/main/projects/miragon-example-backend), but it uses GraphQL instead of REST. The application is supposed to show how Spring integrates with GraphQL and how advantages like selective querying or subscriptions can be implemented.
 It allows managing projects, which represent an object containing a customerId name and an adress. You can also manage customers, which represent an object containing a name. The application demonstrates how one GraphQL Query can access multiple resources by querying a customer with his corresponding projects.
 
 ### 1.1 Domain 'project'
