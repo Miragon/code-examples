@@ -4,29 +4,23 @@ Miragon is your best choice for process automation projects. The Startup based i
 This project is part of our blog post series, in which we show how to implement various challenging requirements with the highest code quality.
 
 ## 1. Project structure
-This backend application allows managing projects, which represent an object containing the customers name and his address. 
-Using the APIs endpoints, a client is able to create, read, update and delete (CRUD) his projects.
+This backend application does basically the same as the REST-Project, but it uses GraphQL. It allows managing projects, which represent an object containing a customerId name and an adress and customers, which represent an object containing a name. 
+Using the GraphQL, a client is able to create, read, update and delete (CRUD) projects and customers.
+The application is supposed to show how Spring integrates with GraphQL and how advantages like selective querying or subscriptions can be implemented.
 
 ### 1.1 Domain 'project'
 We are separating our domains always according the different layers an object representation has to go through:
-- **api**: Layer of the transport object (TO). We'll receive the object in a json format at our published resource (the controller) and map it to an internal representation.
+- **api**: Layer of the transport object (TO). We'll receive the object in a json format at our published mutation-function (defined in the schema) and map it to an internal representation (in the controller).
 - **domain**: Core Layer using internal object representation. Used for communication with external services, notifying clients, sending object to local database, ... .
 - **infrastructure**: Layer for storing the object entities. Its repositories provide a mechanism for the communication with the database, called Java Persistence API (JPA).
 
 ### 1.2 Shared functionality
 The `shared` package contains cross domain functionality:
-- **Exception Handling**: Using the `ResponseEntityExceptionHandler`, internal Exceptions will be mapped to HTTP responses.
 - **Security**: Using JSON Web Token (JWT) in combination with Auth0 to secure the endpoints.
 - **Api-Docu**: Swagger provides our api-doku at: http://localhost:8081/swagger-ui.html
 
 ## 2. Running this project
-To keep the disparity between dev and prod as small as possible, we're using an nginx in front of our application and save the data in a postgres-db.
-Both tools have to be run before you can start the project. Download docker and run:
-```bash
-echo "alias dc='docker compose'" >> ~/.zshrc #~/.bashrc on linux
-. ~/.zshrc
-dc up -d
-dc down #stop services
+The Project uses an in Memory Database, which can be used to store and manipulate data during the session. You can test the api with the [GraphiQL](http://localhost:8081/graphiql) interface.
 ```
 
 ### 2.1 NoSecurity profile
