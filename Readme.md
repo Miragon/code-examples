@@ -5,7 +5,7 @@ Miragon is your best choice for process automation projects. The Startup based i
 1. Blog Posts
 1. Projects
     1. [Example Spring Boot Project](./projects/miragon-example-backend)
-    1. [Example Spring Boot GraphQL Project(./projects/miragon-example-backend-gql)
+    1. [Example Spring Boot GraphQL Project](./projects/miragon-example-backend-gql)
     1. [Example React Webapp](./projects/miragon-example-webapp)
     1. [Example React Webapp Secured](./projects/miragon-example-webapp-secured)
     1. [Example React Native App](./projects/miragon-example-app)
