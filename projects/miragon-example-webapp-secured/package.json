@@ -2,7 +2,7 @@
   "name": "@miragon/example-webapp-securedd",
   "version": "1.0.0",
   "description": "The example webapp secured",
-  "author": "FlowSquad GmbH <info@flowsquad.io>",
+  "author": "Miragon GmbH <info@Miragon.io>",
   "homepage": ".",
   "private": true,
   "scripts": {

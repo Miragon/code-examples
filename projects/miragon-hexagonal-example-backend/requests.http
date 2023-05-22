@@ -1,5 +1,5 @@
 ### GET project
-GET http://localhost:8081/api/project/FlowSquad
+GET http://localhost:8081/api/project/Miragon
 Accept: application/json
 
 ### Create Project

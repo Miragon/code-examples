@@ -2,7 +2,7 @@
   "name": "@miragon/example-webapp",
   "version": "1.0.0",
   "description": "The example webapp",
-  "author": "FlowSquad GmbH <info@flowsquad.io>",
+  "author": "Miragon GmbH <info@Miragon.io>",
   "homepage": ".",
   "private": true,
   "scripts": {
